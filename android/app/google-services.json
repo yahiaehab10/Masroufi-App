@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "71735245925",
+    "firebase_url": "https://masroufi-application-e3ed7-default-rtdb.firebaseio.com",
+    "project_id": "masroufi-application-e3ed7",
+    "storage_bucket": "masroufi-application-e3ed7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:71735245925:android:17fc8f4bfa310af56fda8c",
+        "android_client_info": {
+          "package_name": "com.example.masroufi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXYQ9F6o650I1a1Iuwz3gm5N83qhJWbnE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
