@@ -47,7 +47,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '71735245925',
     projectId: 'masroufi-application-e3ed7',
     authDomain: 'masroufi-application-e3ed7.firebaseapp.com',
-    databaseURL: 'https://masroufi-application-e3ed7-default-rtdb.firebaseio.com',
+    databaseURL:
+        'https://masroufi-application-e3ed7-default-rtdb.firebaseio.com',
     storageBucket: 'masroufi-application-e3ed7.appspot.com',
     measurementId: 'G-BC64WQ4Y2J',
   );
@@ -57,7 +58,8 @@ class DefaultFirebaseOptions {
     appId: '1:71735245925:android:17fc8f4bfa310af56fda8c',
     messagingSenderId: '71735245925',
     projectId: 'masroufi-application-e3ed7',
-    databaseURL: 'https://masroufi-application-e3ed7-default-rtdb.firebaseio.com',
+    databaseURL:
+        'https://masroufi-application-e3ed7-default-rtdb.firebaseio.com',
     storageBucket: 'masroufi-application-e3ed7.appspot.com',
   );
 
@@ -66,7 +68,8 @@ class DefaultFirebaseOptions {
     appId: '1:71735245925:ios:4c0ab99bb6b6521f6fda8c',
     messagingSenderId: '71735245925',
     projectId: 'masroufi-application-e3ed7',
-    databaseURL: 'https://masroufi-application-e3ed7-default-rtdb.firebaseio.com',
+    databaseURL:
+        'https://masroufi-application-e3ed7-default-rtdb.firebaseio.com',
     storageBucket: 'masroufi-application-e3ed7.appspot.com',
     iosBundleId: 'com.example.masroufi',
   );
@@ -76,7 +79,8 @@ class DefaultFirebaseOptions {
     appId: '1:71735245925:ios:4c0ab99bb6b6521f6fda8c',
     messagingSenderId: '71735245925',
     projectId: 'masroufi-application-e3ed7',
-    databaseURL: 'https://masroufi-application-e3ed7-default-rtdb.firebaseio.com',
+    databaseURL:
+        'https://masroufi-application-e3ed7-default-rtdb.firebaseio.com',
     storageBucket: 'masroufi-application-e3ed7.appspot.com',
     iosBundleId: 'com.example.masroufi',
   );
@@ -87,7 +91,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '71735245925',
     projectId: 'masroufi-application-e3ed7',
     authDomain: 'masroufi-application-e3ed7.firebaseapp.com',
-    databaseURL: 'https://masroufi-application-e3ed7-default-rtdb.firebaseio.com',
+    databaseURL:
+        'https://masroufi-application-e3ed7-default-rtdb.firebaseio.com',
     storageBucket: 'masroufi-application-e3ed7.appspot.com',
     measurementId: 'G-VCDCGSHNME',
   );

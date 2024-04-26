@@ -3,9 +3,13 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'Expense.dart';
 
-final databaseURL = Uri.parse('https://masroufi-application-e3ed7-default-rtdb.firebaseio.com/<path-to-data>.json');
+final databaseURL = Uri.parse(
+    'https://masroufi-application-e3ed7-default-rtdb.firebaseio.com/<path-to-data>.json');
 
-Future<void> addExpense({required String title, required double amount, required DateTime date}) async {
+Future<void> addExpense(
+    {required String title,
+    required double amount,
+    required DateTime date}) async {
   final response = await http.post(
     databaseURL,
     body: json.encode({

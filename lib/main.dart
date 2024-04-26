@@ -3,11 +3,14 @@ import 'package:flutter/material.dart';
 import 'ExpensesListWidget.dart';
 import 'NewExpenseWidget.dart';
 import 'Expense.dart';
+import 'firebase_options.dart';
 
-Future<void> main() async {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
-  runApp(const MyApp());
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -19,7 +22,6 @@ class MyApp extends StatelessWidget {
       title: 'Masroufi',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.deepPurple),
-        // Other theme configurations...
       ),
       home: MainPage(),
     );
@@ -36,17 +38,30 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   final List<Expense> allExpenses = [];
 
-  void addNewExpense({required String title, required double amount, required DateTime date}) {
+  void addNewExpense(
+      {required String title, required double amount, required DateTime date}) {
     setState(() {
-      allExpenses.add(Expense(amount: amount, date: date, id: DateTime.now().toString(), title: title));
+      allExpenses.add(Expense(
+          amount: amount,
+          date: date,
+          id: DateTime.now().toString(),
+          title: title));
     });
-    void addNewExpense({required String title, required double amount, required DateTime date}) async {
+    void addNewExpense(
+        {required String title,
+        required double amount,
+        required DateTime date}) async {
       setState(() {
-        allExpenses.add(Expense(amount: amount, date: date, id: DateTime.now().toString(), title: title));
+        allExpenses.add(Expense(
+            amount: amount,
+            date: date,
+            id: DateTime.now().toString(),
+            title: title));
       });
       await Future.delayed(Duration(seconds: 1)); // Adjust the delay as needed
       Navigator.of(context).pop(); // Close the modal bottom sheet
-    }  }
+    }
+  }
 
   void deleteExpense({required String id}) {
     setState(() {
@@ -97,7 +112,8 @@ class _MainPageState extends State<MainPage> {
               ),
             ),
           ),
-          ExpensesListWidget(allExpenses: allExpenses, deleteExpense: deleteExpense),
+          ExpensesListWidget(
+              allExpenses: allExpenses, deleteExpense: deleteExpense),
         ],
       ),
     );

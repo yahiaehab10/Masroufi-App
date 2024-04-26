@@ -11,12 +11,11 @@ class ExpensesListWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         height: 400,
-
         child: ListView.builder(
           itemCount: allExpenses.length,
           itemBuilder: (context, index) {
             return Card(
-            margin: EdgeInsets.all(10),
+                margin: EdgeInsets.all(10),
                 elevation: 5,
                 child: Row(
                   children: [
@@ -58,7 +57,9 @@ class ExpensesListWidget extends StatelessWidget {
 // third child
                     Container(
                       child: IconButton(
-                          onPressed: () {deleteExpense(id:allExpenses[index].id);},
+                          onPressed: () {
+                            deleteExpense(id: allExpenses[index].id);
+                          },
                           icon: Icon(Icons.delete),
                           color: Colors.red),
                     ),
