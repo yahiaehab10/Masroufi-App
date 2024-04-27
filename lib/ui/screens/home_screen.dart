@@ -35,6 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Future<void> _deleteExpense(String expenseId) async {
+    print('Deleting expense with ID: $expenseId');
     await _expenseService.deleteExpense(expenseId);
     _getExpenses(); // Refresh list after delete
   }

@@ -5,10 +5,11 @@ class ExpenseService {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final String _collection = 'expenses'; // Replace with your collection name
 
-  Future<void> addExpense(Expense expense) async {
-    await _firestore
-        .collection(_collection)
-        .add(expense.toMap()); // Use toMap method here
+  Future<Expense> addExpense(Expense expense) async {
+    final docRef =
+        await _firestore.collection(_collection).add(expense.toMap());
+    expense.id = docRef.id; // Set ID from DocumentReference
+    return expense;
   }
 
   Future<void> updateExpense(Expense expense) async {

@@ -32,7 +32,7 @@ class ExpenseList extends StatelessWidget {
               ),
               IconButton(
                 icon: Icon(Icons.delete),
-                onPressed: () => onDelete(expense.id),
+                onPressed: () => onDelete(expense.id!.toString()),
               ),
             ],
           ),

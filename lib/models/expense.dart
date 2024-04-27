@@ -1,5 +1,5 @@
 class Expense {
-  String id; // Firebase-generated document ID
+  String? id; // Firebase-generated document ID
   String title;
   double amount;
   DateTime date;
@@ -8,8 +8,10 @@ class Expense {
     required this.title,
     required this.amount,
     required this.date,
-    this.id = '',
+    this.id,
   });
+
+  Expense.fromData(this.title, this.amount, this.date);
 
   Map<String, dynamic> toMap() {
     return {
