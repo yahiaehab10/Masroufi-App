@@ -5,13 +5,15 @@ import 'package:masroufi/widgets/expense_form.dart';
 import 'package:masroufi/widgets/expense_list.dart';
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final ExpenseService _expenseService = ExpenseService();
   List<Expense> _expenses = [];
+  final ExpenseService _expenseService = ExpenseService();
 
   @override
   void initState() {
@@ -20,8 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Future<void> _getExpenses() async {
-    _expenses = await _expenseService.getExpenses().first; // Get initial data
-    setState(() {});
+    _expenses = (_expenseService.getExpenses()) as List<Expense>;
   }
 
   Future<void> _addExpense(Expense expense) async {
@@ -29,10 +30,10 @@ class _HomeScreenState extends State<HomeScreen> {
     _getExpenses(); // Refresh list after add
   }
 
-  Future<void> _updateExpense(Expense expense) async {
-    await _expenseService.updateExpense(expense);
-    _getExpenses(); // Refresh list after update
-  }
+  // Future<void> _updateExpense(Expense expense) async {
+  //   await _expenseService.updateExpense(expense);
+  //   _getExpenses(); // Refresh list after update
+  // }
 
   Future<void> _deleteExpense(String expenseId) async {
     print('Deleting expense with ID: $expenseId');
@@ -56,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Expanded(
                 child: ExpenseList(
                     expenses: _expenses,
-                    onUpdate: _updateExpense,
+                    // onUpdate: _updateExpense,
                     onDelete: _deleteExpense)),
           ],
         ),

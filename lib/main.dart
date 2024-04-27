@@ -7,10 +7,7 @@ import 'package:masroufi/firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options:
-        DefaultFirebaseOptions.currentPlatform, // Replace with your options
-  );
+  await Firebase.initializeApp();
 
   runApp(MyApp());
 }

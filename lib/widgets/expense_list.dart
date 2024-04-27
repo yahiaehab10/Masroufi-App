@@ -3,13 +3,13 @@ import 'package:masroufi/models/expense.dart';
 
 class ExpenseList extends StatelessWidget {
   final List<Expense> expenses;
-  final Function(Expense) onUpdate;
+  // final Function(Expense) onUpdate;
   final Function(String) onDelete;
 
   const ExpenseList(
       {Key? key,
       required this.expenses,
-      required this.onUpdate,
+      // required this.onUpdate,
       required this.onDelete})
       : super(key: key);
 
@@ -26,10 +26,10 @@ class ExpenseList extends StatelessWidget {
           trailing: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              IconButton(
-                icon: Icon(Icons.edit),
-                onPressed: () => _showUpdateDialog(context, expense),
-              ),
+              // IconButton(
+              //   icon: Icon(Icons.edit),
+              //   onPressed: () => _showUpdateDialog(context, expense),
+              // ),
               IconButton(
                 icon: Icon(Icons.delete),
                 onPressed: () => onDelete(expense.id!.toString()),
@@ -41,8 +41,8 @@ class ExpenseList extends StatelessWidget {
     );
   }
 
-  void _showUpdateDialog(BuildContext context, Expense expense) {
-    // Implement a dialog to edit expense details (similar to ExpenseForm)
-    // Call onUpdate with the updated expense details after successful edit
-  }
+  // void _showUpdateDialog(BuildContext context, Expense expense) {
+  //   // Implement a dialog to edit expense details (similar to ExpenseForm)
+  //   // Call onUpdate with the updated expense details after successful edit
+  // }
 }
