@@ -45,15 +45,20 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: Text('Masroufi'),
       ),
-      body: Column(
-        children: [
-          ExpenseForm(onAdd: _addExpense),
-          Expanded(
-              child: ExpenseList(
-                  expenses: _expenses,
-                  onUpdate: _updateExpense,
-                  onDelete: _deleteExpense)),
-        ],
+      body: Container(
+        color: const Color.fromARGB(
+            255, 208, 193, 237), // Change this to your desired color
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            ExpenseForm(onAdd: _addExpense),
+            Expanded(
+                child: ExpenseList(
+                    expenses: _expenses,
+                    onUpdate: _updateExpense,
+                    onDelete: _deleteExpense)),
+          ],
+        ),
       ),
     );
   }
