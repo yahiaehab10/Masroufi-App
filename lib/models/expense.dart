@@ -24,7 +24,9 @@ class Expense {
 
   static Expense fromMap(Map<String, dynamic> map) => Expense(
         title: map['title'] as String,
-        amount: map['amount'] as double,
+        amount: (map['amount'] is int)
+            ? (map['amount'] as int).toDouble()
+            : map['amount'] as double,
         date: DateTime.parse(
             map['date'] as String), // Parse date string back to DateTime
       );

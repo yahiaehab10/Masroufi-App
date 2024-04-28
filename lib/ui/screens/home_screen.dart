@@ -21,8 +21,12 @@ class _HomeScreenState extends State<HomeScreen> {
     _getExpenses();
   }
 
-  Future<void> _getExpenses() async {
-    _expenses = (_expenseService.getExpenses()) as List<Expense>;
+  void _getExpenses() {
+    _expenseService.getExpenses().listen((List<Expense> data) {
+      setState(() {
+        _expenses = data;
+      });
+    });
   }
 
   Future<void> _addExpense(Expense expense) async {
